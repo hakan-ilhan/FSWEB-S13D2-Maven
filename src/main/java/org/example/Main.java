@@ -36,7 +36,7 @@ public class Main {
         String[] words = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
 
         StringBuilder result = new StringBuilder();
-        //x
+        //xx
         while (number > 0) {
             int digit = number % 10;
             result.insert(0, words[digit] + " ");
