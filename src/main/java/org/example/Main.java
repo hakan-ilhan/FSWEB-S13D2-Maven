@@ -18,6 +18,9 @@ public class Main {
     }
 
     public static boolean isPerfectNumber(int number) {
+        if (number < 0 ){
+            return false;
+        }
       int sumOfDivisors = 0;
       for (int i=1; i < number; i++){
           if ((number % i) == 0) {
@@ -25,7 +28,7 @@ public class Main {
           }
       }
       return sumOfDivisors == number;
-    }
+
 
     public static String numberToWords(int number) {
 
