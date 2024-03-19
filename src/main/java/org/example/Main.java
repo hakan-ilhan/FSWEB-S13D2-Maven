@@ -18,34 +18,36 @@ public class Main {
     }
 
     public static boolean isPerfectNumber(int number) {
-        if (number < 0 ){
+        if (number < 0) {
             return false;
         }
-      int sumOfDivisors = 0;
-      for (int i=1; i < number; i++){
-          if ((number % i) == 0) {
-              sumOfDivisors += number;
-          }
-      }
-      return sumOfDivisors == number;
+        int sum = 0;
 
-
-    public static String numberToWords(int number) {
-
-        if (number < 0) {
-            return "Invalid Value";
+        for (int i = 1; i <= number / 2; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
         }
 
-        String[] words = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
-
-        StringBuilder result = new StringBuilder();
-        //xx
-        while (number > 0) {
-            int digit = number % 10;
-            result.insert(0, words[digit] + " ");
-            number /= 10;
-        }
-
-        return result.toString().trim();
+        return sum == number;
     }
+
+        public static String numberToWords(int number) {
+
+            if (number < 0) {
+                return "Invalid Value";
+            }
+
+            String[] words = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+
+            StringBuilder result = new StringBuilder();
+
+            while (number > 0) {
+                int digit = number % 10;
+                result.insert(0, words[digit] + " ");
+                number /= 10;
+            }
+
+            return result.toString().trim();
+        }
 }
