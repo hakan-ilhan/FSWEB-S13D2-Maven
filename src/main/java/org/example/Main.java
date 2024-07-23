@@ -6,15 +6,17 @@ public class Main {
     }
 
     public static boolean isPalindrome(int number){
-        number = Math.abs(number);
-        int orgNumber = number;
-        int reverse = 0;
-        while(number != 0) {
-            int remainder = number % 10;
-            reverse = reverse * 10 + remainder;
-            number = number/10;
-        }
-        return orgNumber == reverse;
+       number = Math.abs(number);
+       int orgNumber = number;
+       int reversedNumber = 0;
+
+       while(number > 0){
+           int digit = number % 10;
+           reversedNumber = reversedNumber * 10 + digit;
+           number %= 10;
+       }
+
+       return orgNumber == reversedNumber;
     }
 
     public static boolean isPerfectNumber(int number) {
@@ -51,3 +53,5 @@ public class Main {
             return result.toString().trim();
         }
 }
+
+public static String numberToWords( )
