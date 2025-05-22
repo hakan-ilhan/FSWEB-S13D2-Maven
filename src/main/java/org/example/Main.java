@@ -11,7 +11,7 @@ public class Main {
         public static boolean isPalindrome(int number){
 
            int reversed = 0;
-           int original = number;
+           int original = Math.abs(number);
 
            if(number < 0){
                number = -number;
