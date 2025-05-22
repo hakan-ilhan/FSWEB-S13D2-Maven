@@ -5,6 +5,7 @@ import java.sql.Array;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
+        isPalindrome(121);
     }
 
         public static boolean isPalindrome(int number){
@@ -87,7 +88,7 @@ public class Main {
 
            }
 
-            return text;
+            return text.trim();
         }
 
 
