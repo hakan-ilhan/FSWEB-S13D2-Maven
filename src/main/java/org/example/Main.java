@@ -13,6 +13,10 @@ public class Main {
            int reversed = 0;
            int original = number;
 
+           if(number < 0){
+               number = -number;
+           }
+
            while(number > 0) {
 
                int digit = number % 10;
